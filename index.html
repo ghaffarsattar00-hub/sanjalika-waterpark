@@ -35,19 +35,47 @@
 </head>
 <body class="bg-brand-dark text-white font-sans overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-brand-dark/80 backdrop-blur-lg border-b border-white/10">
+   <nav class="fixed w-full z-50 top-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif font-bold tracking-widest text-white">
+            
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-white">
                 SANJILIKA<span class="text-brand-gold">.</span>
             </a>
+
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Home</a>
-                <a href="slides.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Rides</a>
-                <a href="villas.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Villas</a>
+                <a href="index.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Home</a>
+                <a href="slides.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Rides</a>
+                <a href="villas.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Villas</a>
+                <a href="contact.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Contact</a>
                 <a href="booking.html" class="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 uppercase text-xs tracking-widest font-bold">Book Now</a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-white/10 absolute w-full left-0 top-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center">
+                <a href="index.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Home</a>
+                <a href="slides.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Rides</a>
+                <a href="villas.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Villas</a>
+                <a href="contact.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Contact</a>
+                <a href="booking.html" class="text-brand-gold font-bold uppercase tracking-widest py-2">Book Now</a>
             </div>
         </div>
     </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
