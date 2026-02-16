@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Availability | Sanjilika Luxury</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'brand-dark': '#0f172a', 'brand-gold': '#d4af37', 'brand-charcoal': '#1e293b' },
+                    fontFamily: { 'sans': ['Montserrat', 'sans-serif'], 'serif': ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-white">SANJILIKA<span class="text-brand-gold">.</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Home</a>
+                <a href="villas.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Villas</a>
+                <a href="booking.html" class="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 uppercase text-xs tracking-widest font-bold">Book Tickets</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[40vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30"></div>
+        </div>
+        <h1 class="relative z-10 font-serif text-5xl md:text-6xl text-center" data-aos="fade-up">Find Your Sanctuary</h1>
+    </header>
+
+    <section class="py-16 max-w-5xl mx-auto px-6 -mt-20 relative z-20">
+        <div class="bg-brand-charcoal p-8 md:p-12 shadow-2xl border-t-4 border-brand-gold" data-aos="fade-up">
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-brand-gold mb-2">Check-in</label>
+                    <input type="date" class="w-full bg-brand-dark border border-white/10 p-3 text-white focus:border-brand-gold focus:outline-none uppercase text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-brand-gold mb-2">Check-out</label>
+                    <input type="date" class="w-full bg-brand-dark border border-white/10 p-3 text-white focus:border-brand-gold focus:outline-none uppercase text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-brand-gold mb-2">Guests</label>
+                    <select class="w-full bg-brand-dark border border-white/10 p-3 text-white focus:border-brand-gold focus:outline-none text-sm">
+                        <option>2 Adults</option>
+                        <option>2 Adults, 1 Child</option>
+                        <option>4 Adults</option>
+                    </select>
+                </div>
+                <button type="button" class="w-full bg-brand-gold text-brand-dark font-bold uppercase tracking-widest p-3 hover:bg-white transition duration-300">
+                    Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="pb-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-2xl font-serif mb-8 border-l-4 border-brand-gold pl-4">Available Residences</h2>
+        
+        <div class="flex flex-col md:flex-row bg-brand-charcoal border border-white/5 mb-8 group hover:border-brand-gold transition duration-300" data-aos="fade-up">
+            <div class="w-full md:w-1/3 relative overflow-hidden">
+                <img src="https://cdn.kiwicollection.com/media/room_images/PR008605/xl/008605-01-1-tropical-sunset-pool-villa.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            </div>
+            <div class="w-full md:w-2/3 p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif text-2xl">Royal Ocean Villa</h3>
+                        <span class="text-brand-gold font-serif text-xl">$850 <span class="text-xs text-gray-400">/ Night</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Direct ocean access, private infinity pool, glass floors.</p>
+                    <div class="flex gap-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <span><i class="fas fa-bed"></i> 1 King Bed</span>
+                        <span><i class="fas fa-user"></i> Max 3 Guests</span>
+                    </div>
+                </div>
+                <div class="mt-6 text-right">
+                    <a href="booking.html" class="inline-block px-6 py-2 border border-brand-gold text-brand-gold text-xs uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition">Select Villa</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row bg-brand-charcoal border border-white/5 mb-8 group hover:border-brand-gold transition duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full md:w-1/3 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+            </div>
+            <div class="w-full md:w-2/3 p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif text-2xl">Lagoon Residence</h3>
+                        <span class="text-brand-gold font-serif text-xl">$600 <span class="text-xs text-gray-400">/ Night</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Garden view, outdoor rain shower, family friendly.</p>
+                    <div class="flex gap-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <span><i class="fas fa-bed"></i> 2 Queen Beds</span>
+                        <span><i class="fas fa-user"></i> Max 4 Guests</span>
+                    </div>
+                </div>
+                <div class="mt-6 text-right">
+                    <a href="booking.html" class="inline-block px-6 py-2 border border-brand-gold text-brand-gold text-xs uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition">Select Villa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8 border-t border-white/10 text-center text-xs text-gray-500">
+        &copy;  Sanjilika water park Resort.
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+</body>
+</html>
