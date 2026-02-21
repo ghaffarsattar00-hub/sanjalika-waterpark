@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Villas | Sanjilika Luxury</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0f172a',
+                        'brand-gold': '#d4af37',
+                        'brand-charcoal': '#1e293b',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-white">
+                SANJILIKA<span class="text-brand-gold">.</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Home</a>
+                <a href="slides.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Rides</a>
+                <a href="villas.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Villas</a>
+                <a href="contact.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Contact</a>
+                <a href="booking.html" class="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 uppercase text-xs tracking-widest font-bold">Book Now</a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-white/10 absolute w-full left-0 top-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center">
+                <a href="index.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Home</a>
+                <a href="slides.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Rides</a>
+                <a href="villas.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Villas</a>
+                <a href="contact.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Contact</a>
+                <a href="booking.html" class="text-brand-gold font-bold uppercase tracking-widest py-2">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30"></div>
+        </div>
+        <div class="relative z-10 text-center" data-aos="zoom-in">
+            <p class="text-brand-gold uppercase tracking-[0.4em] text-xs mb-4">Accommodation</p>
+            <h1 class="font-serif text-5xl md:text-7xl">The Sanctuary</h1>
+        </div>
+    </header>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 relative group" data-aos="fade-right">
+                <div class="absolute -inset-4 border border-brand-gold/30 rounded-none z-0 group-hover:inset-0 transition-all duration-500"></div>
+                <img src="https://cdn.kiwicollection.com/media/room_images/PR008605/xl/008605-01-1-tropical-sunset-pool-villa.jpg" class="relative z-10 w-full h-[500px] object-cover shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition duration-700">
+            </div>
+            
+            <div class="w-full md:w-1/2" data-aos="fade-left">
+                <span class="text-brand-gold text-xs uppercase tracking-widest mb-2 block">Signature Suite</span>
+                <h2 class="font-serif text-4xl mb-6">Royal Ocean Villa</h2>
+                <p class="text-gray-400 font-light leading-relaxed mb-8">
+                    Suspended above the crystal-clear waters, the Royal Ocean Villa offers an intimate connection with the sea. Featuring a glass-floor living room, private infinity pool, and 24-hour butler service.
+                </p>
+                <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-sm text-gray-300 mb-8">
+                    <div class="flex items-center gap-3"><i class="fas fa-ruler-combined text-brand-gold"></i> 2,500 sq.ft</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-water text-brand-gold"></i> Private Pool</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-user-tie text-brand-gold"></i> Butler Service</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-wifi text-brand-gold"></i> High-Speed Wi-Fi</div>
+                </div>
+                <div class="flex items-center justify-between border-t border-white/10 pt-6">
+                    <div>
+                        <span class="text-2xl font-serif">$850</span> <span class="text-xs text-gray-500 uppercase">/ Night</span>
+                    </div>
+                    <a href="#" class="text-brand-gold uppercase text-xs tracking-widest border-b border-brand-gold pb-1 hover:text-white hover:border-white transition">Book This Villa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-charcoal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2 relative group" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80" class="w-full h-[500px] object-cover shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition duration-700">
+                </div>
+                
+                <div class="w-full md:w-1/2 text-right md:text-right" data-aos="fade-right">
+                    <span class="text-brand-gold text-xs uppercase tracking-widest mb-2 block">Family & Friends</span>
+                    <h2 class="font-serif text-4xl mb-6">Lagoon Residence</h2>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">
+                        Nestled amidst lush tropical gardens with direct access to the Lagoon. This two-bedroom sanctuary creates a sense of complete privacy, perfect for families seeking a luxurious escape.
+                    </p>
+                    <div class="flex flex-col items-end gap-4 text-sm text-gray-300 mb-8">
+                        <div class="flex items-center gap-3">4 Guests (2 Bedrooms) <i class="fas fa-users text-brand-gold"></i></div>
+                        <div class="flex items-center gap-3">Tropical Garden View <i class="fas fa-leaf text-brand-gold"></i></div>
+                        <div class="flex items-center gap-3">Outdoor Rain Shower <i class="fas fa-shower text-brand-gold"></i></div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between border-t border-white/10 pt-6 flex-row-reverse">
+                        <div>
+                            <span class="text-2xl font-serif">$600</span> <span class="text-xs text-gray-500 uppercase">/ Night</span>
+                        </div>
+                        <a href="#" class="text-brand-gold uppercase text-xs tracking-widest border-b border-brand-gold pb-1 hover:text-white hover:border-white transition">Book This Villa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl mb-16">Inclusive Amenities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-6 border border-white/5 hover:border-brand-gold transition duration-500 group">
+                    <i class="fas fa-spa text-3xl text-gray-500 group-hover:text-brand-gold mb-4 transition"></i>
+                    <h3 class="text-sm uppercase tracking-widest">Luxury Spa</h3>
+                </div>
+                <div class="p-6 border border-white/5 hover:border-brand-gold transition duration-500 group">
+                    <i class="fas fa-utensils text-3xl text-gray-500 group-hover:text-brand-gold mb-4 transition"></i>
+                    <h3 class="text-sm uppercase tracking-widest">Fine Dining</h3>
+                </div>
+                <div class="p-6 border border-white/5 hover:border-brand-gold transition duration-500 group">
+                    <i class="fas fa-ship text-3xl text-gray-500 group-hover:text-brand-gold mb-4 transition"></i>
+                    <h3 class="text-sm uppercase tracking-widest">Yacht Access</h3>
+                </div>
+                <div class="p-6 border border-white/5 hover:border-brand-gold transition duration-500 group">
+                    <i class="fas fa-concierge-bell text-3xl text-gray-500 group-hover:text-brand-gold mb-4 transition"></i>
+                    <h3 class="text-sm uppercase tracking-widest">24/7 Concierge</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-xl font-serif font-bold tracking-widest mb-4">SANJILIKA<span class="text-brand-gold">.</span></h2>
+            <div class="flex justify-center space-x-6 mb-8 text-xs text-gray-500 uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="villas.html" class="hover:text-white">Villas</a>
+                <a href="contact.html" class="hover:text-white">Contact</a>
+            </div>
+            <p class="text-gray-600 text-xs">&copy;  Sanjilika water park Resort.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
