@@ -8,7 +8,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -20,37 +19,37 @@
         }
     </script>
 </head>
-<body class="bg-brand-dark text-white font-sans overflow-x-hidden">
+<body class="bg-brand-dark text-white font-sans overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
 
-    <nav class="fixed w-full z-50 top-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed w-full z-50 top-0 bg-brand-dark/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-white">
+            <a href="index.html" class="text-xl sm:text-2xl font-serif font-bold tracking-widest text-white">
                 SANJILIKA<span class="text-brand-gold">.</span>
             </a>
 
-            <div class="hidden md:flex space-x-8 items-center">
+            <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
                 <a href="index.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Home</a>
                 <a href="slides.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Rides</a>
                 <a href="villas.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Villas</a>
                 <a href="contact.html" class="text-xs uppercase tracking-widest hover:text-brand-gold transition">Contact</a>
-                <a href="booking.html" class="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 uppercase text-xs tracking-widest font-bold">Book Now</a>
+                <a href="booking.html" class="px-5 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 uppercase text-xs tracking-widest font-bold rounded-sm">Book Now</a>
             </div>
 
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                <button id="mobile-menu-btn" class="text-white hover:text-brand-gold transition focus:outline-none p-2">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-white/10 absolute w-full left-0 top-full shadow-xl">
-            <div class="flex flex-col px-6 py-4 space-y-4 text-center">
-                <a href="index.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Home</a>
-                <a href="slides.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Rides</a>
-                <a href="villas.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Villas</a>
-                <a href="contact.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-2 border-b border-white/5">Contact</a>
-                <a href="booking.html" class="text-brand-gold font-bold uppercase tracking-widest py-2">Book Now</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-white/10 absolute w-full left-0 top-full shadow-2xl transition-all duration-300">
+            <div class="flex flex-col px-6 py-4 space-y-2 text-center">
+                <a href="index.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-3 border-b border-white/5">Home</a>
+                <a href="slides.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-3 border-b border-white/5">Rides</a>
+                <a href="villas.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-3 border-b border-white/5">Villas</a>
+                <a href="contact.html" class="text-sm uppercase tracking-widest hover:text-brand-gold transition py-3 border-b border-white/5">Contact</a>
+                <a href="booking.html" class="text-brand-dark bg-brand-gold font-bold uppercase tracking-widest py-3 mt-2 rounded-sm inline-block">Book Now</a>
             </div>
         </div>
     </nav>
@@ -58,63 +57,72 @@
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+            // Hamburger aur Close icon toggle karne ke liye
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
         });
     </script>
 
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-12 sm:pb-20 flex flex-col lg:flex-row gap-8 lg:gap-12">
         
         <div class="w-full lg:w-2/3">
             
-            <div class="mb-10" data-aos="fade-up">
-                <h2 class="text-xl font-serif mb-6 flex items-center gap-3">
-                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold">1</span>
+            <div class="mb-8 sm:mb-10" data-aos="fade-up">
+                <h2 class="text-lg sm:text-xl font-serif mb-4 sm:mb-6 flex items-center gap-3">
+                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold shrink-0">1</span>
                     Select Visit Date
                 </h2>
-                <input type="date" class="w-full bg-brand-charcoal border border-white/10 p-4 rounded text-white focus:border-brand-gold focus:outline-none cursor-pointer">
+                <input type="date" class="w-full bg-brand-charcoal border border-white/10 p-3 sm:p-4 rounded text-white focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none cursor-pointer transition">
             </div>
 
-            <div class="mb-10" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-xl font-serif mb-6 flex items-center gap-3">
-                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold">2</span>
+            <div class="mb-8 sm:mb-10" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-lg sm:text-xl font-serif mb-4 sm:mb-6 flex items-center gap-3">
+                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold shrink-0">2</span>
                     Select Tickets
                 </h2>
                 
-                <div class="bg-brand-charcoal border border-white/10 p-6 rounded mb-4 flex justify-between items-center hover:border-brand-gold transition">
+                <div class="bg-brand-charcoal border border-white/10 p-4 sm:p-6 rounded mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 hover:border-brand-gold transition">
                     <div>
-                        <h3 class="font-bold text-lg">Adult Day Pass</h3>
-                        <p class="text-xs text-gray-400">Full access to all slides and pools.</p>
+                        <h3 class="font-bold text-base sm:text-lg">Adult Day Pass</h3>
+                        <p class="text-xs text-gray-400 mt-1">Full access to all slides and pools.</p>
                     </div>
-                    <div class="flex items-center gap-6">
-                        <span class="text-brand-gold font-serif text-xl">$50</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+                        <span class="text-brand-gold font-serif text-lg sm:text-xl">$50</span>
                         <select id="adult-qty" onchange="updateTotal()" class="bg-brand-dark border border-white/20 p-2 rounded text-sm text-center w-16 focus:outline-none focus:border-brand-gold">
                             <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="bg-brand-charcoal border border-white/10 p-6 rounded mb-4 flex justify-between items-center hover:border-brand-gold transition">
+                <div class="bg-brand-charcoal border border-white/10 p-4 sm:p-6 rounded mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 hover:border-brand-gold transition">
                     <div>
-                        <h3 class="font-bold text-lg">Child Day Pass</h3>
-                        <p class="text-xs text-gray-400">For guests under 48 inches (1.2m).</p>
+                        <h3 class="font-bold text-base sm:text-lg">Child Day Pass</h3>
+                        <p class="text-xs text-gray-400 mt-1">For guests under 48 inches (1.2m).</p>
                     </div>
-                    <div class="flex items-center gap-6">
-                        <span class="text-brand-gold font-serif text-xl">$35</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+                        <span class="text-brand-gold font-serif text-lg sm:text-xl">$35</span>
                         <select id="child-qty" onchange="updateTotal()" class="bg-brand-dark border border-white/20 p-2 rounded text-sm text-center w-16 focus:outline-none focus:border-brand-gold">
                             <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="bg-brand-charcoal border border-brand-gold/50 p-6 rounded mb-4 flex justify-between items-center bg-gradient-to-r from-brand-charcoal to-brand-gold/10">
+                <div class="bg-brand-charcoal border border-brand-gold/50 p-4 sm:p-6 rounded mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 bg-gradient-to-r from-brand-charcoal to-brand-gold/10">
                     <div>
-                        <h3 class="font-bold text-lg text-brand-gold"><i class="fas fa-crown mr-2"></i>VIP Fast Pass</h3>
-                        <p class="text-xs text-gray-400">Skip the lines on all major slides.</p>
+                        <h3 class="font-bold text-base sm:text-lg text-brand-gold"><i class="fas fa-crown mr-2"></i>VIP Fast Pass</h3>
+                        <p class="text-xs text-gray-400 mt-1">Skip the lines on all major slides.</p>
                     </div>
-                    <div class="flex items-center gap-6">
-                        <span class="text-brand-gold font-serif text-xl">$80</span>
+                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+                        <span class="text-brand-gold font-serif text-lg sm:text-xl">$80</span>
                         <select id="vip-qty" onchange="updateTotal()" class="bg-brand-dark border border-white/20 p-2 rounded text-sm text-center w-16 focus:outline-none focus:border-brand-gold">
                             <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
                         </select>
@@ -123,83 +131,82 @@
             </div>
 
             <div class="mb-10" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-xl font-serif mb-6 flex items-center gap-3">
-                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold">3</span>
+                <h2 class="text-lg sm:text-xl font-serif mb-4 sm:mb-6 flex items-center gap-3">
+                    <span class="bg-brand-gold text-brand-dark w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold shrink-0">3</span>
                     Your Details
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="First Name" class="bg-brand-charcoal border border-white/10 p-4 rounded text-white focus:border-brand-gold focus:outline-none">
-                    <input type="text" placeholder="Last Name" class="bg-brand-charcoal border border-white/10 p-4 rounded text-white focus:border-brand-gold focus:outline-none">
-                    <input type="email" placeholder="Email Address" class="bg-brand-charcoal border border-white/10 p-4 rounded text-white focus:border-brand-gold focus:outline-none md:col-span-2">
-                    <input type="text" placeholder="Phone Number" class="bg-brand-charcoal border border-white/10 p-4 rounded text-white focus:border-brand-gold focus:outline-none md:col-span-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <input type="text" placeholder="First Name" class="bg-brand-charcoal border border-white/10 p-3 sm:p-4 rounded text-white focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition w-full">
+                    <input type="text" placeholder="Last Name" class="bg-brand-charcoal border border-white/10 p-3 sm:p-4 rounded text-white focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition w-full">
+                    <input type="email" placeholder="Email Address" class="bg-brand-charcoal border border-white/10 p-3 sm:p-4 rounded text-white focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition w-full md:col-span-2">
+                    <input type="text" placeholder="Phone Number" class="bg-brand-charcoal border border-white/10 p-3 sm:p-4 rounded text-white focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition w-full md:col-span-2">
                 </div>
             </div>
         </div>
 
         <div class="w-full lg:w-1/3">
-            <div class="bg-brand-charcoal border border-brand-gold p-8 rounded sticky top-24 shadow-2xl transition-all duration-300">
-                <h3 class="font-serif text-2xl mb-6 text-center border-b border-white/10 pb-4">Order Summary</h3>
+            <div class="bg-brand-charcoal border border-brand-gold p-6 sm:p-8 rounded lg:sticky lg:top-24 shadow-2xl transition-all duration-300 relative z-10">
+                <h3 class="font-serif text-xl sm:text-2xl mb-4 sm:mb-6 text-center border-b border-white/10 pb-4">Order Summary</h3>
                 
                 <div id="empty-cart-msg" class="text-center text-gray-500 text-sm py-4 italic">
                     Select tickets to view summary
                 </div>
 
                 <div id="summary-items" class="hidden space-y-3 mb-6">
-                    </div>
+                </div>
                 
-                <div class="border-t border-white/10 pt-6 mb-8 flex justify-between items-center">
-                    <span class="font-bold text-lg">Total</span>
-                    <span id="grand-total" class="font-serif text-3xl text-brand-gold">$0.00</span>
+                <div class="border-t border-white/10 pt-4 sm:pt-6 mb-6 sm:mb-8 flex justify-between items-center">
+                    <span class="font-bold text-base sm:text-lg">Total</span>
+                    <span id="grand-total" class="font-serif text-2xl sm:text-3xl text-brand-gold">$0.00</span>
                 </div>
 
-                <button class="w-full bg-brand-gold text-brand-dark font-bold py-4 rounded uppercase tracking-widest hover:bg-white transition duration-300 shadow-lg transform active:scale-95">
+                <button class="w-full bg-brand-gold text-brand-dark font-bold py-3 sm:py-4 rounded uppercase tracking-widest hover:bg-white transition duration-300 shadow-lg transform active:scale-95 text-sm sm:text-base">
                     Proceed to Payment
                 </button>
                 
                 <p class="text-center text-xs text-gray-500 mt-4 flex justify-center items-center gap-2">
-                    <i class="fas fa-lock text-brand-gold"></i> 256-bit SSL Secure Payment
+                    <i class="fas fa-lock text-brand-gold"></i> 256-bit SSL Secure
                 </p>
             </div>
         </div>
 
     </div>
 
-    <footer class="bg-black text-white py-8 border-t border-white/10 text-center text-xs text-gray-500">
-        &copy;  Sanjilika water park Resort. All Rights Reserved.
+    <footer class="bg-black text-white py-6 sm:py-8 border-t border-white/10 text-center text-xs text-gray-500">
+        &copy; Sanjilika Water Park Resort. All Rights Reserved.
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-        AOS.init();
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
 
+        // Cart Calculation Function
         function updateTotal() {
-            // Get Quantities
             const adultQty = parseInt(document.getElementById('adult-qty').value) || 0;
             const childQty = parseInt(document.getElementById('child-qty').value) || 0;
             const vipQty = parseInt(document.getElementById('vip-qty').value) || 0;
 
-            // Prices
             const adultPrice = 50;
             const childPrice = 35;
             const vipPrice = 80;
 
-            // Calculate Subtotals
             const adultTotal = adultQty * adultPrice;
             const childTotal = childQty * childPrice;
             const vipTotal = vipQty * vipPrice;
 
             const totalAmount = adultTotal + childTotal + vipTotal;
 
-            // DOM Elements
             const summaryItems = document.getElementById('summary-items');
             const emptyMsg = document.getElementById('empty-cart-msg');
             const grandTotal = document.getElementById('grand-total');
 
-            // Clear previous items
             summaryItems.innerHTML = '';
 
-            // Update UI
             if (totalAmount === 0) {
                 summaryItems.classList.add('hidden');
                 emptyMsg.classList.remove('hidden');
@@ -207,38 +214,35 @@
                 summaryItems.classList.remove('hidden');
                 emptyMsg.classList.add('hidden');
 
-                // Generate Rows
                 if (adultQty > 0) {
                     summaryItems.innerHTML += `
-                        <div class="flex justify-between text-sm animate-fade-in">
+                        <div class="flex justify-between text-xs sm:text-sm">
                             <span class="text-gray-400">Adult Pass (x${adultQty})</span>
                             <span>$${adultTotal}</span>
                         </div>`;
                 }
                 if (childQty > 0) {
                     summaryItems.innerHTML += `
-                        <div class="flex justify-between text-sm animate-fade-in">
+                        <div class="flex justify-between text-xs sm:text-sm">
                             <span class="text-gray-400">Child Pass (x${childQty})</span>
                             <span>$${childTotal}</span>
                         </div>`;
                 }
                 if (vipQty > 0) {
                     summaryItems.innerHTML += `
-                        <div class="flex justify-between text-sm animate-fade-in text-brand-gold">
+                        <div class="flex justify-between text-xs sm:text-sm text-brand-gold">
                             <span>VIP Upgrade (x${vipQty})</span>
                             <span>$${vipTotal}</span>
                         </div>`;
                 }
                 
-                // Add Tax/Fee (Fixed $10 for example if items exist)
                 summaryItems.innerHTML += `
-                     <div class="flex justify-between text-sm pt-2 border-t border-white/5 text-gray-500">
+                     <div class="flex justify-between text-xs sm:text-sm pt-2 border-t border-white/5 text-gray-500">
                         <span>Processing Fee</span>
                         <span>$5.00</span>
                     </div>`;
             }
 
-            // Update Grand Total (Adding $5 fee if cart has items)
             const finalTotal = totalAmount > 0 ? totalAmount + 5 : 0;
             grandTotal.innerText = '$' + finalTotal + '.00';
         }
